@@ -19,9 +19,9 @@ class LightingSystem
     public:
         LightingSystem();
         void refreshUniforms(Shader* shader, EntityManager* entityManager);
-        void addSpotLight(EntityManager* entityManager, Entity entity, gfx::SpotLight&& newData);
-        void addPointLight(EntityManager* entityManager, Entity entity, gfx::PointLight&& newData);
-        void addDirectionalLight(EntityManager* entityManager, Entity entity, gfx::DirectionalLight&& newData);
+        void addSpotLight(EntityManager* entityManager, Entity::Entity entity, gfx::SpotLight&& newData);
+        void addPointLight(EntityManager* entityManager, Entity::Entity entity, gfx::PointLight&& newData);
+        void addDirectionalLight(EntityManager* entityManager, Entity::Entity entity, gfx::DirectionalLight&& newData);
 
     private:
         int pointLightCount; // Number of active point lights

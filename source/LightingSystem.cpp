@@ -9,14 +9,14 @@ LightingSystem::LightingSystem()
 {
 }
 
-void LightingSystem::addSpotLight(EntityManager* entityManager, Entity entity, gfx::SpotLight&& newData)
+void LightingSystem::addSpotLight(EntityManager* entityManager, Entity::Entity entity, gfx::SpotLight&& newData)
 {
     //TODO: logic for managing mutliple spotlights
 
     entityManager->addComponentData(entity, std::move(newData));
 }
 
-void LightingSystem::addPointLight(EntityManager* entityManager, Entity entity, gfx::PointLight&& newData)
+void LightingSystem::addPointLight(EntityManager* entityManager, Entity::Entity entity, gfx::PointLight&& newData)
 {
     newData.shaderIndex = pointLightCount;
 
@@ -26,7 +26,7 @@ void LightingSystem::addPointLight(EntityManager* entityManager, Entity entity, 
     }
 }
 
-void LightingSystem::addDirectionalLight(EntityManager* entityManager, Entity entity, gfx::DirectionalLight&& newData)
+void LightingSystem::addDirectionalLight(EntityManager* entityManager, Entity::Entity entity, gfx::DirectionalLight&& newData)
 {
     //TODO: logic for managing mutliple directional lights
 
